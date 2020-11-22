@@ -1,1 +1,1 @@
-Creating slider project 
+Creating slider project. 
