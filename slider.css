@@ -1,0 +1,144 @@
+:root {
+  --fixed-width: 600px;
+  --color-primary: #606161;
+}
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.slider {
+  width: 60vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.reviews {
+  margin-bottom: 3 rem;
+}
+
+.reviews h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews span {
+  font-size: 0.9em;
+  color: var(--color-primary);
+  margin-right: 1rem;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 60%;
+  background: white;
+  padding: 0.5rem;
+  border: 1px solid rgb(180, 177, 177);
+  box-shadow: 2px 2px 3px 3px rgb(71, 70, 70);
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 1500;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+  margin: 0.6rem 0;
+  font-size: 22px;
+}
+
+.title {
+  margin-bottom: 1.25rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: blueviolet;
+  font-weight: 360;
+}
+
+.text {
+  color: var(--color-primary);
+  line-height: 1.8;
+  max-width: 35em;
+  margin: 0 auto;
+  letter-spacing: 1px;
+}
+
+.quote-icon {
+  font-size: 4rem;
+  margin-top: 1rem;
+  color: blueviolet;
+}
+
+.btn {
+  position: absolute;
+  top: 175px;
+  background: blueviolet;
+  color: white;
+  padding: 0.25rem 0.35rem;
+  border: transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.next-btn {
+  right: -0.5rem;
+}
+
+.prev-btn {
+  left: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .next-btn {
+    right: -5rem;
+  }
+  .prev-btn {
+    left: -5rem;
+  }
+  .btn {
+    font-size: 1.3rem;
+    padding: 00.35rem 0.5rem;
+  }
+  .quote-icon {
+    font-size: 4rem;
+  }
+}
+/*slider specific css */
+
+.slide-container {
+  display: flex;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  /*background: brown;*/
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3 linear;
+  opacity: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide.next {
+  transform: translateX(100%);
+}
+
+.slide.last {
+  transform: translateX(-100%);
+}
